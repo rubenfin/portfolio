@@ -9,14 +9,23 @@
 
 html {
   min-height: 100%;
-  overflow: hidden;
+  overflow: auto; /* when changed to overflow: hidden; only frontpage is shown */
 }
 
 body {
-  background: #1d212b;
-  height: calc(100vh - 8em);
+  background-image: linear-gradient(
+    to bottom,
+    #1d212b 50%,
+    #1d212b 0%,
+    #898b74 50%,
+    #898b74 100%
+  );
+  height: 206rvh;
 }
 
+/* FRONTPAGE */
+
+/* navbar */
 nav {
   position: relative;
   top: 1.5em;
@@ -71,9 +80,10 @@ nav ul a:hover {
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 0.25em;
+  border-radius: 0.175em;
 }
 
+/* hello-card */
 section {
   width: 100vh;
   min-height: 100vh;
@@ -89,7 +99,10 @@ section:first-of-type {
   justify-content: flex-start;
   align-items: center;
   letter-spacing: 0.1em;
+  line-height: 2.2em;
 }
+
+/* parralax images */
 
 section img {
   position: absolute;
@@ -100,6 +113,8 @@ section img {
   filter: grayscale(90%);
   z-index: -1;
 }
+
+/* hello-card glass container */
 
 .container {
   width: 100%;
@@ -132,6 +147,8 @@ section img {
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* hello-card text */
 
 section p {
   font-size: 2.2em;
@@ -180,3 +197,5 @@ section h2 {
   position: fixed;
   z-index: 100;
 }
+
+/* 3 CARDS */
