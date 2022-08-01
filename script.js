@@ -1,5 +1,7 @@
 console.log("script");
 
+
+//parralax on mousemove
 document.addEventListener("mousemove", parallax);
 
 function parallax(e) {
@@ -12,3 +14,10 @@ function parallax(e) {
     layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
 }
+
+// preloader
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+  loader.style.display = "none"
+})

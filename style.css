@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
   min-height: 100%;
   overflow: hidden;
 }
@@ -17,11 +17,35 @@ body {
   height: calc(100vh - 8em);
 }
 
-nav h1 {
+nav {
+  margin-top: 7.5%;
+}
+
+.nav-left {
+  float: left;
+  margin-left: 3.5%;
+}
+
+.nav-right {
+  float: right;
+}
+
+nav ul h1 {
   color: white;
   font-weight: 500;
-  margin-top: 2%;
-  margin-left: 2%;
+  border: 1px solid #fff;
+  padding: 0.75em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
 }
 
 section {
@@ -70,30 +94,65 @@ section img {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.line{
+.line {
   position: relative;
   top: 50%;
-  width: 24em;
+  width: 13.2em;
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 100%;
+  font-size: 1.5em;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);
 }
 
 section p {
   font-size: 2em;
-  
 }
 
 section h2 {
   font-weight: 400;
   font-size: 1.25em;
   padding-top: 3%;
+  text-align: center;
+}
+
+/*Animation*/
+
+.anim-typewriter {
+  animation: typewriter 3s steps(30) 1s 1 normal both,
+    blinkTextCursor 700ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 13.2em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/*Preloader*/
+
+#preloader {
+  background: #1d212b url(images/loader.gif) no-repeat center center;
+  background-size: 5%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
