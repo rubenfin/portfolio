@@ -18,7 +18,8 @@ body {
 }
 
 nav {
-  margin-top: 7.5%;
+  position: relative;
+  top: 1.5em;
 }
 
 .nav-left {
@@ -28,6 +29,12 @@ nav {
 
 .nav-right {
   float: right;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 5em;
+  margin-top: 1.5em;
+  position: relative;
 }
 
 nav ul h1 {
@@ -41,11 +48,30 @@ nav ul h1 {
 
 nav ul li {
   list-style-type: none;
+  margin-right: 5em;
 }
 
 nav ul a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.2em;
+  transition: 0.2s;
+  padding: 10% 25%;
+  border: 1px solid transparent;
+}
+
+nav ul a:hover {
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.25em;
 }
 
 section {
@@ -62,14 +88,12 @@ section:first-of-type {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: -5%;
-  margin-left: 10%;
   letter-spacing: 0.1em;
 }
 
 section img {
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 10%;
   width: 110%;
   height: 60%;
@@ -82,7 +106,6 @@ section img {
   height: 100%;
   padding: 5%;
   margin-left: 27%;
-  margin-top: 7.5%;
 }
 
 .glass {
@@ -101,7 +124,7 @@ section img {
 .line {
   position: relative;
   top: 50%;
-  width: 13.2em;
+  width: 13.7em;
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   font-size: 1.5em;
@@ -111,7 +134,8 @@ section img {
 }
 
 section p {
-  font-size: 2em;
+  font-size: 2.2em;
+  font-weight: 500;
 }
 
 section h2 {
@@ -124,8 +148,8 @@ section h2 {
 /*Animation*/
 
 .anim-typewriter {
-  animation: typewriter 3s steps(30) 1s 1 normal both,
-    blinkTextCursor 700ms steps(30) infinite normal;
+  animation: typewriter 3.3s steps(40) 1s 1 normal both,
+    blinkTextCursor 700ms steps(40) infinite normal;
 }
 
 @keyframes typewriter {
@@ -133,7 +157,7 @@ section h2 {
     width: 0;
   }
   to {
-    width: 13.2em;
+    width: 13.7em;
   }
 }
 
