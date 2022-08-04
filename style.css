@@ -12,15 +12,20 @@ html {
   overflow: auto; /* when changed to overflow: hidden; only frontpage is shown */
 }
 
+/*scrollreveal.js - https://scrollrevealjs.org/guide/user-experience.html */
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 body {
   background-image: linear-gradient(
     to bottom,
-    #1d212b 50%,
     #1d212b 0%,
-    #898b74 50%,
-    #898b74 100%
+    #1d212b 56%,
+    #494b4e 56%,
+    #494b4e 100%
   );
-  height: 206rvh;
+  height: 206vh;
 }
 
 /* FRONTPAGE */
@@ -199,3 +204,52 @@ section h2 {
 }
 
 /* 3 CARDS */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 7em;
+}
+
+.card1,
+.card2,
+.card3 {
+  margin: 2.5em;
+  padding: 2em;
+  background-color: #898b74;
+  color: #fff;
+  border: solid 1px black;
+  border-radius: 0.5em;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card1 h1,
+.card2 h1,
+.card3 h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.card1 p,
+.card2 p,
+.card3 p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 400;
+  font-size: 1.25em;
+  padding-top: 3%;
+  text-align: center;
+}
