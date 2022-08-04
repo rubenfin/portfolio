@@ -1,6 +1,7 @@
 console.log("script");
 
-//reveal on scroll
+// REVEAL ON SROLL
+// Standard reveal options to create revealon scroll animation
 ScrollReveal({
   reset: false,
   distance: '75px',
@@ -8,13 +9,14 @@ ScrollReveal({
   delay: 300
 })
 
+// Target elements and specify options to create reveal animation
 ScrollReveal().reveal('.nav-right li, .navbar',  {delay : 0, origin: 'top', interval: 100})
 ScrollReveal().reveal('.container',  {delay : 600})
 ScrollReveal().reveal('.card1', {delay : 0, origin: 'left'})
-ScrollReveal().reveal('.card2', {delay: 500, origin: 'bottom'})
-ScrollReveal().reveal('.card3', {delay: 1000, origin: 'right'})
+ScrollReveal().reveal('.card2', {delay: 450, origin: 'bottom'})
+ScrollReveal().reveal('.card3', {delay: 900, origin: 'right'})
 
-//parralax on mousemove
+// PARRALAX ON MOUSEMOVE
 document.addEventListener("mousemove", parallax);
 
 function parallax(e) {
@@ -28,9 +30,10 @@ function parallax(e) {
   });
 } 
 
-// preloader
+// PRELOADER
 var loader = document.getElementById("preloader");
 
+// if page is loaded, change display style to "none", so the loader goes away 
 window.addEventListener("load", function(){
   loader.style.display = "none"
 })

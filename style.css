@@ -12,12 +12,16 @@ html {
   overflow: auto; /* when changed to overflow: hidden; only frontpage is shown */
 }
 
-/*scrollreveal.js - https://scrollrevealjs.org/guide/user-experience.html */
+/*scrollreveal.js - https://scrollrevealjs.org/guide/user-experience.html , this is important when using scrollrevealjs*/
 html.sr .load-hidden {
   visibility: hidden;
 }
 
 body {
+  /*
+  background-image, used as a linear-gradient so that the background has multiple different colors,
+  using height and vh so that I can 2 different colored backgrounds per screen
+  */
   background-image: linear-gradient(
     to bottom,
     #1d212b 0%,
