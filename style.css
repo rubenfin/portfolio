@@ -144,7 +144,7 @@ section img {
 .line {
   position: relative;
   top: 50%;
-  width: 13.7em;
+  width: 13.4em;
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   font-size: 1.5em;
@@ -179,7 +179,7 @@ section h2 {
     width: 0;
   }
   to {
-    width: 13.7em;
+    width: 13.4em;
   }
 }
 
@@ -209,6 +209,7 @@ section h2 {
   justify-content: space-around;
   width: 100%;
   margin-top: 7em;
+  overflow: hidden;
 }
 
 .card1,

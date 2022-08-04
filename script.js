@@ -8,10 +8,11 @@ ScrollReveal({
   delay: 300
 })
 
-ScrollReveal().reveal('.container', {delay : 0})
-ScrollReveal().reveal('.card1', {delay : 0})
-ScrollReveal().reveal('.card2', {delay: 500})
-ScrollReveal().reveal('.card3', {delay: 1000})
+ScrollReveal().reveal('.nav-right li, .navbar',  {delay : 0, origin: 'top', interval: 100})
+ScrollReveal().reveal('.container',  {delay : 600})
+ScrollReveal().reveal('.card1', {delay : 0, origin: 'left'})
+ScrollReveal().reveal('.card2', {delay: 500, origin: 'bottom'})
+ScrollReveal().reveal('.card3', {delay: 1000, origin: 'right'})
 
 //parralax on mousemove
 document.addEventListener("mousemove", parallax);
